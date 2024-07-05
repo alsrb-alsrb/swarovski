@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: "auto",
+                spaceBetween: 17,
+                scrollbar: {
+                    el: ".swiper-scrollbar",
+                    hide: true,
+                },
+            });
+
+            $('.sec_4_gnb>li').each(function(i){
+                $(this).attr({
+                    'data-index':i
+                });
+            });
+
+            $('.sec_4_gnb>li').click(function(){
+
+                var num = $(this).attr('data-index');
+                console.log(num);
+
+                    $('.sec_4_gnb>li').removeClass('gnb_color_on');
+                    $('.sec_4_gnb>li').eq(num).addClass('gnb_color_on');
+                
+                if(num==0){
+                    $('.sec_4_con_1 a').css({
+                        backgroundImage:'url(img/sec_4_con_1.png)'
+                    });
+                    $('.sec_4_con_2 a').css({
+                        backgroundImage:'url(img/sec_4_con_2.png)'
+                    });
+                    $('.sec_4_con_3 a').css({
+                        backgroundImage:'url(img/sec_4_con_3.png)'
+                    });
+                    $('.sec_4_con_4 a').css({
+                        backgroundImage:'url(img/sec_4_con_4.png)'
+                    });
+                    $('.sec_4_con_5 a').css({
+                        backgroundImage:'url(img/sec_4_con_5.png)'
+                    });
+
+                    $('.sec_4_con_1_text>h4').text('Idyllia 드롭 이어링');
+                    $('.sec_4_con_2_text>h4').text('Idyllia 뱅글');
+                    $('.sec_4_con_3_text>h4').text('Idyllia 칵테일 링');
+                    $('.sec_4_con_4_text>h4').text('Idyllia 클립 이어링');
+                    $('.sec_4_con_5_text>h4').text('Idyllia 펜던트');
+
+                    $('.sec_4_con_1_text>h5').html('조개, 화이트, <br>골드 톤 플래팅');
+                    $('.sec_4_con_2_text>h5').html('라운드 컷, 조개, 화이트, <br>믹스 메탈 피니시');
+                    $('.sec_4_con_3_text>h5').html('크리스털 펄, 불가사리, <br>골드 톤 플래팅');
+                    $('.sec_4_con_4_text>h5').html('조개, 블루, <br>믹스 메탈 피니시');
+                    $('.sec_4_con_5_text>h5').html('크리스털 펄, 조개, 핑크, <br>로듐 플래팅');
+
+                    $('.sec_4_con_1_text>h3').text('480,000 ₩');
+                    $('.sec_4_con_2_text>h3').text('450,000 ₩');
+                    $('.sec_4_con_3_text>h3').text('450,000 ₩');
+                    $('.sec_4_con_4_text>h3').text('750,000 ₩');
+                    $('.sec_4_con_5_text>h3').text('400,000 ₩');
+                    
+                }else if(num==1){
+                    $('.sec_4_con_1 a').css({
+                        backgroundImage:'url(img/sec_4_2-1.png)'
+                    });
+                    $('.sec_4_con_2 a').css({
+                        backgroundImage:'url(img/sec_4_2-2.png)'
+                    });
+                    $('.sec_4_con_3 a').css({
+                        backgroundImage:'url(img/sec_4_2-3.png)'
+                    });
+                    $('.sec_4_con_4 a').css({
+                        backgroundImage:'url(img/sec_4_2-4.png)'
+                    });
+                    $('.sec_4_con_5 a').css({
+                        backgroundImage:'url(img/sec_4_2-5.png)'
+                    });
+
+                    $('.sec_4_con_1_text>h4').text('Crystalline Aura 워치');
+                    $('.sec_4_con_2_text>h4').text('Octea Lux Sport 워치');
+                    $('.sec_4_con_3_text>h4').text('Octea Lux Chrono 워치');
+                    $('.sec_4_con_4_text>h4').text('Octea Lux Sport 워치');
+                    $('.sec_4_con_5_text>h4').text('Octea Lux Sport 워치');
+
+                    $('.sec_4_con_1_text>h5').html('레더 스트랩, 그린, <br>로즈 골드 톤 피니시');
+                    $('.sec_4_con_2_text>h5').html('메탈 브레이슬릿, 블랙, <br>블랙 피니시');
+                    $('.sec_4_con_3_text>h5').html('레더 스트랩, 블루, <br>스테인리스 스틸');
+                    $('.sec_4_con_4_text>h5').html('메탈 브레이슬릿, 블루, <br>블루 피니시');
+                    $('.sec_4_con_5_text>h5').html('메탈 브레이슬릿, 블랙, <br>스테인리스 스틸');
+
+                    $('.sec_4_con_1_text>h3').text('580,000 ₩');
+                    $('.sec_4_con_2_text>h3').text('680,000 ₩');
+                    $('.sec_4_con_3_text>h3').text('600,000 ₩');
+                    $('.sec_4_con_4_text>h3').text('680,000 ₩');
+                    $('.sec_4_con_5_text>h3').text('630,000 ₩');
+
+                }else if(num==2){
+                    $('.sec_4_con_1 a').css({
+                        backgroundImage:'url(img/sec_4_3-1.png)'
+                    });
+                    $('.sec_4_con_2 a').css({
+                        backgroundImage:'url(img/sec_4_3-2.png)'
+                    });
+                    $('.sec_4_con_3 a').css({
+                        backgroundImage:'url(img/sec_4_3-3.png)'
+                    });
+                    $('.sec_4_con_4 a').css({
+                        backgroundImage:'url(img/sec_4_3-4.png)'
+                    });
+                    $('.sec_4_con_5 a').css({
+                        backgroundImage:'url(img/sec_4_3-5.png)'
+                    });
+
+                    $('.sec_4_con_1_text>h4').text('Star Wars');
+                    $('.sec_4_con_2_text>h4').text('Aladdin');
+                    $('.sec_4_con_3_text>h4').text('겨울왕국 2');
+                    $('.sec_4_con_4_text>h4').text('Alice In Wonderland');
+                    $('.sec_4_con_5_text>h4').text('Disney100');
+
+                    $('.sec_4_con_1_text>h5').text('만달로리안 더 차일드');
+                    $('.sec_4_con_2_text>h5').text('지니');
+                    $('.sec_4_con_3_text>h5').text('엘사');
+                    $('.sec_4_con_4_text>h5').text('Alice');
+                    $('.sec_4_con_5_text>h5').text('Minnie Mouse');
+
+                    $('.sec_4_con_1_text>h3').text('225,000 ₩');
+                    $('.sec_4_con_2_text>h3').text('780,000 ₩');
+                    $('.sec_4_con_3_text>h3').text('630,000 ₩');
+                    $('.sec_4_con_4_text>h3').text('630,000 ₩');
+                    $('.sec_4_con_5_text>h3').text('600,000 ₩');
+
+                }else if(num==3){
+                    $('.sec_4_con_1 a').css({
+                        backgroundImage:'url(img/sec_4_4-1.png)'
+                    });
+                    $('.sec_4_con_2 a').css({
+                        backgroundImage:'url(img/sec_4_4-2.png)'
+                    });
+                    $('.sec_4_con_3 a').css({
+                        backgroundImage:'url(img/sec_4_4-3.png)'
+                    });
+                    $('.sec_4_con_4 a').css({
+                        backgroundImage:'url(img/sec_4_4-4.png)'
+                    });
+                    $('.sec_4_con_5 a').css({
+                        backgroundImage:'url(img/sec_4_4-5.png)'
+                    });
+
+                    $('.sec_4_con_1_text>h4').text('High 스마트폰 케이스');
+                    $('.sec_4_con_2_text>h4').text('High 스마트폰 케이스');
+                    $('.sec_4_con_3_text>h4').text('High 스마트폰 케이스');
+                    $('.sec_4_con_4_text>h4').text('High 스마트폰 케이스');
+                    $('.sec_4_con_5_text>h4').text('High 스마트폰 케이스');
+
+                    $('.sec_4_con_1_text>h5').text('iPhone® 15 Pro, 블랙');
+                    $('.sec_4_con_2_text>h5').text('iPhone® 15 Pro, 실버 톤');
+                    $('.sec_4_con_3_text>h5').text('iPhone® 15 Pro, 골드 톤');
+                    $('.sec_4_con_4_text>h5').text('iPhone® 14 Pro, 핑크');
+                    $('.sec_4_con_5_text>h5').text('iPhone® 14 Pro, 로즈골드 톤');
+
+                    $('.sec_4_con_1_text>h3').text('175,000 ₩');
+                    $('.sec_4_con_2_text>h3').text('135,000 ₩');
+                    $('.sec_4_con_3_text>h3').text('155,000 ₩');
+                    $('.sec_4_con_4_text>h3').text('155,000 ₩');
+                    $('.sec_4_con_5_text>h3').text('135,000 ₩');
+                    
+                };
+
+            
+
+            });
+
+            $('.event>a').click(function(){
+                $('.event').slideToggle(300);
+            });
+
+            $(window).scroll(function(){
+
+                var scroll = $(window).scrollTop();
+                console.log(scroll);
+
+                if(scroll >= 52){
+                    $('header').css({
+                        position:'fixed',
+                        top:0,
+                        borderBottom:'0.1px solid #f8f8f8'
+                    });
+                }else if(scroll < 52){
+                    $('header').css({
+                        position:'relative'
+                    });
+                }
+
+            });
+
+            var swiper = new Swiper(".mainswiper", {
+                spaceBetween: 30,
+                centeredSlides: true,
+                autoplay: {
+                    delay: 6000,
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                });
+        });
+    </script>
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="event">
+            <h4 class="event_text_1">매장 및 swarovski.com 에서 SCS 제품이나 홈 제품 포함 35만원 이상 구매 고객께 SCS 비틀을 증정합니다.</h4>
+            <h4 class="event_text_2">35만원 이상 구매 고객께 SCS 비틀을 증정합니다.</h4>
+            <a href="#"><img src="./img/close_white.png" alt="close"></a>
+        </div>
+        
+        <header>
+            <div class="menu">
+                <a href="#">
+                    <img src="./img/menu.png" alt="menu">
+                </a>
+            </div>
+            <div class="logo">
+                <a href="#">
+                    <img src="./img/swa-brandlogo-icon.png" alt="swa_logo">
+                </a>
+            </div>
+            <ul class="header_gnb">
+                <li><a href="#">신상품</a></li>
+                <li><a href="#">주얼리</a></li>
+                <li><a href="#">워치</a></li>
+                <li><a href="#">액세서리</a></li>
+                <li><a href="#">데코레이션</a></li>
+                <li><a href="#">기프트</a></li>
+                <li><a href="#">Swarovski Created Diamonds</a></li>
+                <li><a href="#">스와로브스키의 세계</a></li>
+                <li><a href="#">아울렛</a></li>
+            </ul>
+            <div class="header_icon">
+                <a href="#"><img src="./img/search.png" alt="search"></a>
+                <a href="#"><img src="./img/bag.png" alt="bag"></a>
+            </div>
+        </header>
+
+        <main>
+            <div class="swiper mainswiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="main_img">
+                        <img src="img/main_img.png" alt="main_img">
+                    </div>
+                    
+                    <div class="main_text">
+                        <h4>Time to shine</h4>
+                        <h2>Up to 30% off <br>일부 시계 한정*</h2>
+                        <div class="main_btn">
+                            <div class="main_btn_lf main_b"><a href="#">쇼핑하기</a></div>
+                            <div class="main_btn_rg main_b"><a href="#">약관</a></div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="main_img main_video">
+                        <div class="video_cover"></div>
+                        <video src="img/TT.webm" autoplay muted loop></video>
+                    </div>
+                    
+                    <div class="main_text main_video_text">
+                        <h2>2024 봄/여름</h2>
+                        <h4>예술로 표현하는 나만의 개성</h4>
+                        <div class="main_btn">
+                            <div class="main_btn_lf main_b"><a href="#">쇼핑하기</a></div>
+                            <div class="main_btn_rg main_b"><a href="#">더 알아보기</a></div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </main>
+
+        <section class="sec_1">
+            <h2 class="title">NEW PRODUCT</h2>
+            <div class="sec_1_con_wrap">
+                <div class="sec_1_main_img">
+                    <img src="./img/sec_1_main_img.png" alt="sec_1_main">
+                </div>
+                <div class="sec_1_side_img">
+                    <img src="./img/sec_1_side.png" alt="sec_1_side">
+                </div>
+                <div class="sec_1_con">
+                    <div class="sec_1_con_1 sec_1_container"><a href="#">
+                        <img src="./img/sec_1_img_1.png" alt="new_product">
+                        <h4>Idyllia 오픈 링</h4>
+                        <h5>크리스털 펄, 조개, 화이트, <br>골드 톤 플래팅</h5>
+                        <h3>195,000 ₩</h3>
+                    </a></div>
+
+                    <div class="sec_1_con_2 sec_1_container"><a href="#">
+                        <img src="./img/sec_1_img_2.png" alt="new_product">
+                        <h4>Idyllia 스터드 이어링</h4>
+                        <h5>불가사리, 스몰, 멀티컬러, <br>골드 톤 플래팅</h5>
+                        <h3>205,000 ₩</h3>
+                    </a></div>
+
+                    <div class="sec_1_con_3 sec_1_container"><a href="#">
+                        <img src="./img/sec_1_img_3.png" alt="new_product">
+                        <h4>Idyllia 네크리스</h4>
+                        <h5>크리스털 펄, 조개, 화이트, <br>골드 톤 플래팅</h5>
+                        <h3>850,000 ₩</h3>
+                    </a></div>
+
+                    <div class="sec_1_con_4 sec_1_container"><a href="#">
+                        <img src="./img/sec_1_img_4.png" alt="new_product">
+                        <h4>Idyllia 네크리스</h4>
+                        <h5>믹스 컷, 조개, 화이트, <br>골드 톤 플래팅</h5>
+                        <h3>450,000 ₩</h3>
+                    </a></div>
+                </div>
+            </div>
+        </section>
+
+        <div class="sec_c_wrap">
+            <section class="sec_2 sec_c">
+                <div class="sec_2_title sec_c_title">
+                    <h2>Swarovski Created Diamonds</h2>
+                    <h3>다이아몬드 주얼리의 미래가 눈 앞에 찾아왔습니다.<br>
+                        Swarovski Created Diamonds 주얼리 컬렉션을 통해 신세계의 아름다움을 느껴보세요.<br>
+                        아름다운 랩그로운 다이아몬드는 채굴을 통하지 않았다는 점만을<br>
+                        제외한다면 천연 다이아몬드와 모든면에서 동일한 작품입니다.</h3>
+                    <div class="sec_2_title_btn sec_c_btn"><a href="#">
+                        <h4>쇼핑하기</h4>
+                    </a></div>
+                </div>
+                <div class="sec_2_video sec_c_video">
+                    <video src="./img/diamonds.webm" autoplay muted loop ></video>
+                </div>
+            </section>
+            <section class="sec_3 sec_c">
+                <div class="sec_3_video sec_c_video">
+                    <video src="./img/eye.webm" autoplay muted loop></video>
+                </div>
+
+                <div class="sec_3_title sec_c_title">
+                    <p>최신 아이웨어 룩 둘러보기</p>
+                    <h2>아이웨어 가이드</h2>
+                    <h3>캣아이, 에비에이터 선글라스와 같은 클래식 라인을 선택할 수도, 혹은<br>
+                        색다른 포인트를 연출하는 액세서리를 선택할 수도 있습니다.<br>
+                        걱정하지 마세요. Swarovski의 럭셔리 선글라스는<br>
+                        어떤 룩에든 드라마를 선물할 거니까요.</h3>
+                    <div class="sec_3_title_btn sec_c_btn">
+                        <a href="#">
+                            <h4>쇼핑하기</h4>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="sec_4">
+            <div class="sec_4_title">
+                <h2 class="title">CATEGORY</h2>
+                <ul class="sec_4_gnb">
+                    <li class="gnb_color_on">주얼리</li>
+                    <li>워치</li>
+                    <li>데코레이션</li>
+                    <li>악세서리</li>
+                </ul>
+            </div>
+
+            <div class="sec_4_con_wrap">
+                <div class="sec_4_con_1 sec_4_con">
+                    <div class="sec_4_img"><a href="#"></a></div>
+                    <div class="sec_4_con_1_text">
+                        <h4>Idyllia 드롭 이어링</h4>
+                        <h5>조개, 화이트, <br>골드 톤 플래팅</h5>
+                        <h3>480,000 ₩</h3>
+                    </div>
+                </div>
+
+                <div class="sec_4_con_2 sec_4_con">
+                    <div class="sec_4_img"><a href="#"></a></div>
+                    <div class="sec_4_con_2_text">
+                        <h4>Idyllia 뱅글</h4>
+                        <h5>라운드 컷, 조개, 화이트, <br>믹스 메탈 피니시</h5>
+                        <h3>450,000 ₩</h3>
+                    </div>
+                </div>
+
+                <div class="sec_4_con_3 sec_4_con">
+                    <div class="sec_4_img"><a href="#"></a></div>
+                    <div class="sec_4_con_3_text">
+                        <h4>Idyllia 칵테일 링</h4>
+                        <h5>크리스털 펄, 불가사리, <br>골드 톤 플래팅</h5>
+                        <h3>450,000 ₩</h3>
+                    </div>
+                </div>
+
+                <div class="sec_4_con_4 sec_4_con">
+                    <div class="sec_4_img"><a href="#"></a></div>
+                    <div class="sec_4_con_4_text">
+                        <h4>Idyllia 클립 이어링</h4>
+                        <h5>조개, 블루, <br>믹스 메탈 피니시</h5>
+                        <h3>750,000 ₩</h3>
+                    </div>
+                </div>
+
+                <div class="sec_4_con_5 sec_4_con">
+                    <div class="sec_4_img"><a href="#"></a></div>
+                    <div class="sec_4_con_5_text">
+                        <h4>Idyllia 펜던트</h4>
+                        <h5>크리스털 펄, 조개, 핑크, <br>로듐 플래팅</h5>
+                        <h3>400,000 ₩</h3>
+                    </div>
+                </div>
+
+            </div>
+            
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="sec_4_con_1 sec_4_con">
+                            <div class="sec_4_img"><a href="#"></a></div>
+                            <div class="sec_4_con_1_text">
+                                <h4>Idyllia 드롭 이어링</h4>
+                                <h5>조개, 화이트, <br>골드 톤 플래팅</h5>
+                                <h3>480,000 ₩</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="sec_4_con_2 sec_4_con">
+                            <div class="sec_4_img"><a href="#"></a></div>
+                            <div class="sec_4_con_2_text">
+                                <h4>Idyllia 뱅글</h4>
+                                <h5>라운드 컷, 조개, 화이트, <br>믹스 메탈 피니시</h5>
+                                <h3>450,000 ₩</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="sec_4_con_3 sec_4_con">
+                            <div class="sec_4_img"><a href="#"></a></div>
+                            <div class="sec_4_con_3_text">
+                                <h4>Idyllia 칵테일 링</h4>
+                                <h5>크리스털 펄, 불가사리, <br>골드 톤 플래팅</h5>
+                                <h3>450,000 ₩</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="sec_4_con_4 sec_4_con">
+                            <div class="sec_4_img"><a href="#"></a></div>
+                            <div class="sec_4_con_4_text">
+                                <h4>Idyllia 클립 이어링</h4>
+                                <h5>조개, 블루, <br>믹스 메탈 피니시</h5>
+                                <h3>750,000 ₩</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="sec_4_con_5 sec_4_con">
+                            <div class="sec_4_img"><a href="#"></a></div>
+                            <div class="sec_4_con_5_text">
+                                <h4>Idyllia 펜던트</h4>
+                                <h5>크리스털 펄, 조개, 핑크, <br>로듐 플래팅</h5>
+                                <h3>400,000 ₩</h3>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            
+
+        </section>
+
+        <section class="sec_5">
+            <h2 class="title">SWAROVSKI의 세계</h2>
+            <ul class="sec_5_con_wrap">
+                <li class="sec_5_con_1 sec_5_con">
+                    <div class="sec_5_video">
+                        <video src="img/sec_5-1.webm" autoplay muted loop></video>
+                    </div>
+                    <h3>바다에서 영감을 받은 주얼리</h3>
+                    <div class="sec_5_btn"><a href="#">
+                        <h4>더 읽기</h4></a>
+                    </div>
+                </li>
+                <li class="sec_5_con_2 sec_5_con">
+                    <div class="sec_5_video">
+                        <video src="img/sec_5-2.webm" autoplay muted loop></video>
+                    </div>
+                    <h3>워치 스타일 가이드</h3>
+                    <div class="sec_5_btn"><a href="#">
+                        <h4>더 읽기</h4></a>
+                    </div>
+                </li>
+                <li class="sec_5_con_3 sec_5_con">
+                    <div class="sec_5_video">
+                        <video src="img/sec_5-3.webm" autoplay muted loop></video>
+                    </div>
+                    <h3>Disney 이상한 나라의 앨리스와 친구들</h3>
+                    <div class="sec_5_btn"><a href="#">
+                        <h4>더 읽기</h4></a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="sec_6">
+            <div class="sec_6_con_wrap_lf sec_6_con_wrap">
+                <div class="sec_6_con_1 sec_6_con">
+                    <div class="sec_6_img_1 sec_6_img">
+                        <img src="img/sec_6_icon_1.png" alt="serv_icon">
+                    </div>
+                    <h2>라이브 채팅</h2>
+                    <h3>도움이 필요하십니까?<br>
+                        채팅으로 고객 서비스 팀에 문의하세요.</h3>
+                </div>
+                <div class="sec_6_con_2 sec_6_con">
+                    <div class="sec_6_img_2 sec_6_img">
+                        <img src="img/sec_6_icon_2.png" alt="serv_icon">
+                    </div>
+                    <h2>고객 서비스</h2>
+                    <h3>자주 묻는 질문에 대한 답변을 둘러보시거나<br>
+                        고객 서비스 팀에 문의하세요.</h3>
+                </div>
+            </div>
+            <div class="sec_6_con_wrap_rg sec_6_con_wrap">
+                <div class="sec_6_con_3 sec_6_con">
+                    <div class="sec_6_img_3 sec_6_img">
+                        <img src="img/sec_6_icon_3.png" alt="serv_icon">
+                    </div>
+                    <h2>CLICK & RESERVE</h2>
+                    <h3>온라인으로 예약하고 선택한 매장에서<br>
+                        무료로 제품을 수령하세요.</h3>
+                </div>
+                <div class="sec_6_con_4 sec_6_con">
+                    <div class="sec_6_img_4 sec_6_img">
+                        <img src="img/sec_6_icon_4.png" alt="serv_icon">
+                    </div>
+                    <h2>선물서비스</h2>
+                    <h3>퍼스널 터치를 더해보세요.</h3>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="fot_top">
+                <div class="fot_logo"><a href="#">
+                    <img src="img/fot_logo.png" alt="swarovski_footer">
+                </a></div>
+                <ul class="fot_icon">
+                    <li><a href="#">
+                        <img src="img/facebook_default-outline.png" alt="facebook">
+                    </a></li>
+                    <li><a href="#">
+                        <img src="img/pinterest_default-outline.png" alt="pinterest">
+                    </a></li>
+                    <li><a href="#">
+                        <img src="img/instagram_default-outline.png" alt="instagram">
+                    </a></li>
+                    <li><a href="#">
+                        <img src="img/youtube_default-outline.png" alt="youtube">
+                    </a></li>
+                    <li><a href="#">
+                        <img src="img/tiktok_default-outline.png" alt="tiktok">
+                    </a></li>
+                    <li><a href="#">
+                        <img src="img/x-twitter_default-outline.png" alt="twitter">
+                    </a></li>
+                </ul>
+            </div>
+            <div class="fot_bottom">
+                <div class="fot_copy_wrap">
+                    <div class="fot_copy">
+                        <img src="img/country_white.png" alt="country">
+                        <h5>대한민국 ko</h5>
+                    </div>
+                    <p>Copyright ⓒ 2024 Swarovski 대한민국.<br>
+                        All rights reserved.</p>
+                    <p>SWAROVSKI 및 SWAN 로고는 Swarovski AG의<br>
+                        등록상표입니다.</p>
+                </div>
+                <ul class="fot_bottom_wrap">
+                    <li>
+                        <h5>스와로브스키 고객 관리 센터</h5>
+                        <p>고객 서비스 개요</p>
+                        <p>주문 상태</p>
+                        <p>기프트 카드 잔액</p>
+                        <p>배송</p>
+                        <p>반품 및 교환</p>
+                        <p>온라인 수선 문의</p>
+                        <p>문의</p>
+                        <p>사이즈 참조</p>
+                        <p>매장 검색</p>
+                    </li>
+                    <li>
+                        <h5>멤버십</h5>
+                        <p>회원가입</p>
+                        <p>Swarovski Club</p>
+                        <p>Crystal Society (SCS)</p>
+                    </li>
+                    <li>
+                        <h5>회사소개</h5>
+                        <p>Swarovski 소개</p>
+                        <p>지속 가능성</p>
+                        <p>채용 정보</p>
+                        <p>Alumni Community</p>
+                        <p>법인구매</p>
+                        <p>프로페셔널</p>
+                        <p>사이트 맵</p>
+                        <p>Kristallwelten</p>
+                        <p>Swarovski Mobility</p>
+                        <p>Code of Conduct</p>
+                    </li>
+                    <li>
+                        <h5>법적고지</h5>
+                        <p>저작권</p>
+                        <p>이용약관</p>
+                        <p>개인정보 보호</p>
+                        <p>쿠키 동의</p>
+                        <p>회사 정보</p>
+                        <p>REACH 정보</p>
+                        <p>정보보호 동의서</p>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    
+</body>
+
+</html>
